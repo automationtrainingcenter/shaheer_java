@@ -12,6 +12,11 @@ public class TestVaraibles {
 		
 		//calling instance method of VariablesDemo class inside this class main method
 		obj.insMethod();
+		int x = 45;
+//		++x;
+		
+		System.out.println(++x);
+		System.out.println(x);
 	}
 	
 }

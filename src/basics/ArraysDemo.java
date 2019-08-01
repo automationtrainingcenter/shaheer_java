@@ -59,12 +59,16 @@ public class ArraysDemo {
 //		marks[6] = 18; we can't use the index number which is greater than or equal to length of the array
 
 		// retrieving data from array
-		System.out.println(marks[0]);
-		System.out.println(marks[1]);
-		System.out.println(marks[2]);
-		System.out.println(marks[3]);
-		System.out.println(marks[4]);
-		System.out.println(marks[5]);
+//		System.out.println(marks[0]);
+//		System.out.println(marks[1]);
+//		System.out.println(marks[2]);
+//		System.out.println(marks[3]);
+//		System.out.println(marks[4]);
+//		System.out.println(marks[5]);
+		// retrieving data from array using normal for loop
+		for (int i = 0; i < marks.length; i++) {
+			System.out.println(marks[i]);
+		}
 
 		// array initialization
 		char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
@@ -72,11 +76,14 @@ public class ArraysDemo {
 		// find the number of items in an array
 		System.out.println("the number of items in vowels array is " + vowels.length);
 
-		System.out.println(vowels[0]);
-		System.out.println(vowels[1]);
-		System.out.println(vowels[2]);
-		System.out.println(vowels[3]);
-		System.out.println(vowels[4]);
+//		System.out.println(vowels[0]);
+//		System.out.println(vowels[1]);
+//		System.out.println(vowels[2]);
+//		System.out.println(vowels[3]);
+//		System.out.println(vowels[4]);
+		for (char v : vowels) {
+			System.out.println(v);
+		}
 
 		// 2D arrays
 		int[][] matrix1 = new int[2][2];
@@ -88,10 +95,17 @@ public class ArraysDemo {
 		matrix1[1][1] = 1;// row 2 column 2
 
 		// retrieve the data
-		System.out.print(matrix1[0][0] + "\t");
-		System.out.println(matrix1[0][1]); // first row completed
-		System.out.print(matrix1[1][0] + "\t");
-		System.out.println(matrix1[1][1]); // second row completed
+//		System.out.print(matrix1[0][0] + "\t");
+//		System.out.println(matrix1[0][1]); // first row completed
+//		System.out.print(matrix1[1][0] + "\t");
+//		System.out.println(matrix1[1][1]); // second row completed
+		// retrieve data using for loop
+		for (int r = 0; r < matrix1.length; r++) {
+			for (int c = 0; c < matrix1[r].length; c++) {
+				System.out.print(matrix1[r][c]+"\t");
+			}
+			System.out.println();
+		}
 
 		// initialize a 2D array
 		int[][] matrix2 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
@@ -128,19 +142,25 @@ public class ArraysDemo {
 		System.out.println("number of columsn in third row = " + arr[2].length);
 
 		// retrieve the data
-		System.out.print(arr[0][0] + "\t");
-		System.out.print(arr[1][0] + "\t");
-		System.out.print(arr[2][0] + "\n");
-		System.out.print(arr[0][1] + "\t");
-		System.out.print(arr[1][1] + "\t");
-		System.out.print(arr[2][1] + "\n");
-		System.out.print(arr[0][2] + "\t");
-		System.out.print(arr[1][2] + "\t");
-		System.out.print(arr[2][2] + "\n");
-		System.out.print(arr[0][3] + "\t");
-		System.out.print(arr[1][3] + "\t");
-		System.out.print(arr[2][3] + "\n");
-		System.out.print(arr[1][4] + "\t");
-		System.out.print(arr[2][4] + "\n");
+//		System.out.print(arr[0][0] + "\t");
+//		System.out.print(arr[1][0] + "\t");
+//		System.out.print(arr[2][0] + "\n");
+//		System.out.print(arr[0][1] + "\t");
+//		System.out.print(arr[1][1] + "\t");
+//		System.out.print(arr[2][1] + "\n");
+//		System.out.print(arr[0][2] + "\t");
+//		System.out.print(arr[1][2] + "\t");
+//		System.out.print(arr[2][2] + "\n");
+//		System.out.print(arr[0][3] + "\t");
+//		System.out.print(arr[1][3] + "\t");
+//		System.out.print(arr[2][3] + "\n");
+//		System.out.print(arr[1][4] + "\t");
+//		System.out.print(arr[2][4] + "\n");
+		for(int[] row : arr) {
+			for(int col : row) {
+				System.out.print(col+"\t");
+			}
+			System.out.println();
+		}
 	}
 }

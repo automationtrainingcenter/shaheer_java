@@ -94,6 +94,75 @@ public class LoopsDemo {
 		for(char vowel : vowels) {
 			System.out.println(vowel);
 		}
+		
+		// break statement
+		int m = 0;
+		while(m < 10) {
+			if(m == 5) {
+				break; // it will terminate the loop
+			}
+			System.out.print(m+"\t");
+			m++;
+		}
+		System.out.println();
+		
+		
+		// continue statement
+		int n= -1;
+		while(n < 10) {
+			n++;
+			if(n == 5) {
+				continue;
+			}
+			System.out.print(n+"\t");
+			
+		}
+		System.out.println();
+		
+		
+		int x = 10;
+		while(x < 20) {
+			x++;
+			if(x % 2 != 0) {
+				continue;
+			}
+			System.out.print(x+"\t");
+		}
+		System.out.println();
+		
+		// verify a given number is prime or not
+		System.out.println("enter a number");
+		int primeOrNot = sc.nextInt();
+		boolean flag = true;
+		for(int p = 2; p <= primeOrNot/2; p++) {
+			if(primeOrNot % p == 0) {
+				flag = false;
+				break;
+			}
+		}
+		if(flag) {
+			System.out.println("given number is prime");
+		}else {
+			System.out.println("given number is not prime");
+		}
+		
+		// write a program to reverse the given string
+		String str = "sunshine";
+		String rstr = "";
+		for(i = str.length() - 1  ;i >= 0; i--) {
+			rstr = rstr + str.charAt(i);
+//			System.out.println(rstr);
+		}
+		
+		System.out.println(rstr);
+		
+		//change the case of alternate characters eg: sunshine output: SuNsHiNe
+		
 	}
+	
+	
+	
+	
+	
 
 }

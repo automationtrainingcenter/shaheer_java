@@ -153,7 +153,6 @@ public class LoopsDemo {
 			rstr = rstr + str.charAt(i);
 //			System.out.println(rstr);
 		}
-		
 		System.out.println(rstr);
 		
 		//change the case of alternate characters eg: sunshine output: SuNsHiNe

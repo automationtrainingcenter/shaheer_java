@@ -57,5 +57,47 @@ package classesandobjects;
  */
 
 public class MethodsDemo {
+	
+	// method without input and without output
+	public void methodOne() {
+		System.out.println("this is method without input and without output");
+	}
+	
+	
+	// method without input and with output
+	public boolean methodTwo() {
+		System.out.println("this is method two without input and with boolean output");
+		// to return output we have to use return keyword
+		return true;
+	}
+	
+	
+	// method with input and without output
+	public void methodThree(String arg1) {
+		System.out.println("this is method three with string input and without output");
+		System.out.println("input arg1 is "+arg1);
+	}
+	
+	// method with input and with output
+	public int methodFour(int a, int b) {
+		System.out.println("this is method four with two integer inputs and with an integer output");
+		System.out.println("input  a is "+a+" input b is "+b);
+		System.out.println("the output is sum of a and b ");
+		return a+b;
+	}
+	
+	
+	public static void main(String[] args) {
+		MethodsDemo obj = new MethodsDemo();
+		obj.methodOne();
+		boolean r1 = obj.methodTwo();
+		System.out.println(r1);
+		obj.methodThree("sunshine");
+		int r2 = obj.methodFour(10, 20);
+		System.out.println(r2);
+	}
+	
+	
+	
 
 }

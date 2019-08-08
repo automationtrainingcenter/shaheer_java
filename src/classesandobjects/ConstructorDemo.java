@@ -84,7 +84,9 @@ public class ConstructorDemo {
 		ConstructorDemo obj3 = new ConstructorDemo(103, "rakesh", "admin", 8765432329l, 56000.00);
 		obj3.display();
 		
-		
+		obj3.salary = 25000.00;
+		obj3.display();
+
 	}
 	
 

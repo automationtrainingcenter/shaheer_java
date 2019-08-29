@@ -1,4 +1,9 @@
 package abstraction;
+
+import java.util.Scanner;
+
+import abstraction.Outer.Inner;
+
 /*
  * Abstraction means a plan or template to create a class
  * Abstraction means hiding the implementation details of methods
@@ -57,9 +62,22 @@ public class AbstractionDemo {
 		InterfaceOne i1Obj = new ClassOne();
 		i1Obj.methodOne();
 		
-		InterfaceTwo i2Obj = new ClassOne();
+//		InterfaceTwo i2Obj = new ClassOne();
+//		InterfaceTwo i2Obj = (ClassOne)i1Obj;
+		InterfaceTwo i2Obj = (InterfaceTwo)i1Obj;
 		i2Obj.methodTwo();
 		
+		// single class implementing outer and inner interfaces
+		Outer outObj = new OuterInnerImpl();
+		outObj.methodOne();
+		Inner inObj = outObj.method();
+//		Outer.Inner inObj = (Outer.Inner) outObj;
+		inObj.methodTwo();
 		
+		outObj.method().methodTwo();
+		
+//		Scanner sc = new Scanner(System.in);
+//		int length = sc.next().toLowerCase().concat("some string").toCharArray().length;
+//		System.out.println(length);
 	}
 }

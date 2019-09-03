@@ -17,5 +17,14 @@ public class MyInterfaceImpl implements MyInterface{
 		System.out.println("methodThree impl");
 	}
 	
+//	@Override
+//	public static void staticMethod() {
+//		System.out.println("static method of inteface");
+//	}
+
+//	@Override
+//	public void defaultMethod() {
+//		System.out.println("default method overriden in impl class");
+//	}
 	
 }

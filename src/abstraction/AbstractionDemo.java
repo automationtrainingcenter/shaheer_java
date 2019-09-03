@@ -29,7 +29,8 @@ import abstraction.Outer.Inner;
  * From Java 8 onwards interface allows concrete methods
  * These concrete methods are either static methods or "default" methods
  * We can access default method using interface reference and static method using interface name
- * 
+ * we can override a default method of interface in implementation classes but
+ * we can't override static method of interface
  * we can't create an instance of either abstract class or interface but we can create object reference,
  * 
  * Type of interfaces
@@ -79,5 +80,13 @@ public class AbstractionDemo {
 //		Scanner sc = new Scanner(System.in);
 //		int length = sc.next().toLowerCase().concat("some string").toCharArray().length;
 //		System.out.println(length);
+		
+		// Java 8 static and default methods
+		MyInterface myIntObj = new MyInterfaceImpl();
+//		// accessing default method
+		myIntObj.defaultMethod();
+		
+		// accessing static method
+		MyInterface.staticMethod();
 	}
 }

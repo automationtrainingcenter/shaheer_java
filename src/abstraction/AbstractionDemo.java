@@ -47,46 +47,80 @@ import abstraction.Outer.Inner;
 
 public class AbstractionDemo {
 	public static void main(String[] args) {
-		
-		//abstract class
+
+		// abstract class
 		AbstractClassDemo obj = new AbstractClassImpl();
 		obj.methodOne();
 		obj.methodTwo();
-		
+
 		// interface
 		MyInterface iObj = new MyInterfaceImpl();
 		iObj.methodOne();
 		iObj.methodTwo();
 		iObj.methodThree();
-		
+
 		// single class implementing multiple interfaces
 		InterfaceOne i1Obj = new ClassOne();
 		i1Obj.methodOne();
-		
+
 //		InterfaceTwo i2Obj = new ClassOne();
 //		InterfaceTwo i2Obj = (ClassOne)i1Obj;
-		InterfaceTwo i2Obj = (InterfaceTwo)i1Obj;
+		InterfaceTwo i2Obj = (InterfaceTwo) i1Obj;
 		i2Obj.methodTwo();
-		
+
 		// single class implementing outer and inner interfaces
 		Outer outObj = new OuterInnerImpl();
 		outObj.methodOne();
 		Inner inObj = outObj.method();
 //		Outer.Inner inObj = (Outer.Inner) outObj;
 		inObj.methodTwo();
-		
+
 		outObj.method().methodTwo();
-		
+
 //		Scanner sc = new Scanner(System.in);
 //		int length = sc.next().toLowerCase().concat("some string").toCharArray().length;
 //		System.out.println(length);
-		
+
 		// Java 8 static and default methods
 		MyInterface myIntObj = new MyInterfaceImpl();
 //		// accessing default method
 		myIntObj.defaultMethod();
-		
+
 		// accessing static method
 		MyInterface.staticMethod();
+
+		// Functional interfaces
+		// using normal java class
+		FuncInerface1 f1Obj = new FuncInterface1Impl();
+		f1Obj.methodOne();
+
+		// using anonymous class
+		FuncInerface1 fanon = new FuncInerface1() {
+
+			@Override
+			public void methodOne() {
+				System.out.println("FuncInterface1 method one definition in anonymous class");
+			}
+
+		};
+
+		fanon.methodOne();
+
+		// using lambda expressions
+		FuncInerface1 flam = () -> System.out.println("FuncInterface1 method one definition in lambda expression");
+		flam.methodOne();
+		
+		FuncInterface2 flam2 = (int x, int y) -> x+y;
+		int sum = flam2.add(10, 30);
+		System.out.println(sum);
+		
+		FuncInterface3 flam3 = (String a, String b) -> {
+			int x = Integer.parseInt(a);
+			int y = Integer.parseInt(b);
+			return x+y;
+		};
+		
+		int result = flam3.add("20", "40");
+		System.out.println(result);
 	}
 }
